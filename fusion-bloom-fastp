@@ -27,7 +27,7 @@ all: $(pavfinder_outdir)/sv.bedpe
 $(fastp_outdir)/$(name).html: $(left) $(right)
 	source $(profile) && \
 	mkdir -p $(fastp_outdir) && \
-	time fastp --in1 $(left) --in2 $(right) --out1 $(fastp_outdir)/$(left) --out2 $(fastp_outdir)/$(left) --adapter_fasta $(adapters) --thread $(NUM_THREADS) --trim_poly_g --html $(fastp_outdir)/$(name).html --json $(fastp_outdir)/$(name).json $(RNABLOOM_PARAMS)
+	time fastp --in1 $(left) --in2 $(right) --out1 $(fastp_outdir)/$(left) --out2 $(fastp_outdir)/$(left) --adapter_fasta $(adapters) --thread $(NUM_THREADS) --trim_poly_g --html $(fastp_outdir)/$(name).html --json $(fastp_outdir)/$(name).json $(FASTP_PARAMS)
 
 
 # assemble
